@@ -1,513 +1,76 @@
 <!doctype html>
-<html lang="ar" dir="rtl" class="h-full">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>همزة الوصل وهمزة القطع</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b3b39">
+  <title>همزة الوصل وهمزة القطع | الصف الخامس</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='16' width='64' height='64' fill='%230b3b39'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='42' fill='%23f7c966'%3E%D8%A3%3C/text%3E%3C/svg%3E">
   <style>
-        body { box-sizing: border-box; }
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
-        * { font-family: 'Tajawal', Arial, sans-serif; }
-
-        .vocab-word {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-            transition: all 0.2s;
-        }
-        .vocab-word:hover { transform: translateY(-2px); }
-        .vocab-tooltip {
-            position: absolute;
-            bottom: 100%;
-            right: 50%;
-            transform: translateX(50%) translateY(-8px);
-            background: white;
-            border: 4px solid;
-            padding: 14px 20px;
-            border-radius: 16px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-            white-space: nowrap;
-            z-index: 100;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s, transform 0.3s;
-            font-weight: 800;
-            font-size: 1.3rem;
-        }
-        .vocab-tooltip.active {
-            opacity: 1;
-            transform: translateX(50%) translateY(-12px);
-        }
-        .vocab-tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            right: 50%;
-            transform: translateX(50%);
-            border: 12px solid transparent;
-            border-top-color: inherit;
-        }
-
-        .section-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .section-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
-        }
-
-        .quiz-option {
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        .quiz-option:hover:not(.disabled) {
-            transform: translateX(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        .quiz-option.correct { animation: correctPulse 0.7s ease-out; }
-        .quiz-option.incorrect { animation: incorrectShake 0.6s ease-out; }
-        @keyframes correctPulse {
-            0%, 100% { transform: scale(1); }
-            30% { transform: scale(1.08); }
-            60% { transform: scale(0.98); }
-        }
-        @keyframes incorrectShake {
-            0%, 100% { transform: translateX(0); }
-            20% { transform: translateX(-12px); }
-            40% { transform: translateX(12px); }
-            60% { transform: translateX(-8px); }
-            80% { transform: translateX(8px); }
-        }
-        .progress-bar { transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-        .animate-fade-in { animation: fadeIn 0.6s ease-out; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+    :root{--ink:#102f32;--muted:#567174;--green:#0b3b39;--green2:#14655e;--gold:#f2bd52;--cream:#fbf7ed;--white:#fff;--red:#b8433e;--ok:#16805f;--shadow:0 18px 50px rgba(10,50,48,.13);--fs:1}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 8% 5%,#f9e8bd 0,transparent 22%),linear-gradient(135deg,#f8f2e4,#eef7f3);color:var(--ink);font-family:"Tajawal",system-ui,sans-serif;font-size:calc(16px * var(--fs));line-height:1.75;min-height:100vh}
+    button{font:inherit}button:focus-visible,a:focus-visible{outline:4px solid #f4c65f;outline-offset:3px}.shell{width:min(1180px,calc(100% - 28px));margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(251,247,237,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(11,59,57,.1)}
+    .topin{height:72px;display:flex;align-items:center;gap:12px}.brand{margin-inline-end:auto;font-weight:900;color:var(--green);white-space:nowrap}.tool{border:1px solid #cbdcd6;background:#fff;color:var(--green);border-radius:14px;min-width:45px;height:44px;padding:0 13px;cursor:pointer;font-weight:800}.tool:hover{background:#edf7f3}.progress{position:absolute;bottom:0;right:0;height:4px;background:var(--gold);width:0;transition:.2s}
+    .hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:55px 0}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e5f2ed;border:1px solid #bdd9ce;color:var(--green2);padding:7px 14px;border-radius:99px;font-weight:800}.hero h1{font-size:clamp(2.7rem,6vw,5.5rem);line-height:1.02;margin:22px 0 15px;letter-spacing:-2px}.hero h1 span{color:var(--red)}.lead{font-size:clamp(1.1rem,2vw,1.45rem);color:var(--muted);max-width:660px}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{border:0;border-radius:16px;padding:13px 22px;font-weight:900;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}.primary{background:var(--green);color:white;box-shadow:0 10px 24px rgba(11,59,57,.22)}.secondary{background:white;color:var(--green);border:1px solid #cedfd9}.letter-stage{background:var(--green);border-radius:40px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden;min-height:430px;display:grid;place-items:center}.letter-stage:before{content:"";position:absolute;width:280px;height:280px;border:60px solid rgba(255,255,255,.05);border-radius:50%;left:-80px;top:-100px}.letters{display:flex;gap:22px;direction:rtl;z-index:1}.letter{width:170px;height:230px;background:#fff;border-radius:28px;display:grid;place-items:center;font-size:8rem;font-weight:900;box-shadow:0 20px 30px rgba(0,0,0,.2);position:relative}.letter.cut{color:var(--red);transform:rotate(4deg)}.letter.join{color:var(--green2);transform:rotate(-4deg)}.letter small{position:absolute;bottom:12px;font-size:.88rem;color:var(--muted)}
+    section{padding:76px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}.section-head h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;margin:0}.section-head p{margin:0;color:var(--muted);max-width:540px}.card{background:rgba(255,255,255,.94);border:1px solid rgba(11,59,57,.1);border-radius:26px;padding:26px;box-shadow:var(--shadow)}
+    .discover{display:grid;grid-template-columns:1fr 1fr;gap:20px}.speech{font-size:clamp(1.35rem,3vw,2rem);text-align:center;font-weight:800;background:#f6faf8;border-radius:18px;padding:22px;margin:15px 0}.word{color:var(--red);font-size:1.2em}.reveal{display:none;background:#e8f5ef;border-right:5px solid var(--ok);padding:15px;border-radius:12px}.reveal.show{display:block;animation:up .35s ease}@keyframes up{from{opacity:0;transform:translateY(8px)}}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:20px}.type{position:relative;overflow:hidden}.type h3{font-size:2rem;margin:0 0 10px}.badge{display:inline-block;padding:5px 11px;border-radius:99px;font-weight:800}.cut-card{border-top:8px solid var(--red)}.cut-card .badge{background:#fae4e1;color:#8d2825}.join-card{border-top:8px solid var(--green2)}.join-card .badge{background:#ddf0e8;color:#145d50}.big-rule{font-weight:900;font-size:1.3rem}.examples{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:7px 12px;background:#f4f6f2;border-radius:10px;font-weight:800}.note{margin-top:16px;background:#fff7df;border-right:5px solid var(--gold);padding:13px;border-radius:12px}
+    .places{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.place h3{margin:5px 0;font-size:1.35rem}.icon{width:50px;height:50px;display:grid;place-items:center;border-radius:15px;background:#e4f2ed;font-size:1.5rem}.place ul{padding-right:21px;margin-bottom:0}.enrich{border:1px dashed #d6aa4d;background:#fffaf0}
+    .strategy{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:steps}.step{counter-increment:steps;position:relative;padding-top:75px}.step:before{content:counter(steps,arabic-indic);position:absolute;top:20px;right:24px;background:var(--green);color:#fff;width:45px;height:45px;border-radius:14px;display:grid;place-items:center;font-weight:900;font-size:1.3rem}.step h3{margin:0 0 5px}.mini{color:var(--muted)}
+    .activity{background:linear-gradient(135deg,#0b3b39,#145d55);color:#fff;border-radius:34px;padding:clamp(22px,4vw,44px)}.activity .section-head p{color:#cce1da}.quizbox{background:#fff;color:var(--ink);border-radius:24px;padding:clamp(18px,3vw,30px)}.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-weight:700}.qtext{font-size:clamp(1.35rem,2.5vw,1.9rem);font-weight:900;margin:18px 0}.options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.option{border:2px solid #dce7e3;background:#fff;border-radius:15px;padding:14px;text-align:right;cursor:pointer;font-weight:800;color:var(--ink)}.option:hover{border-color:var(--green2);background:#f1f8f5}.option.correct{background:#dff4e9;border-color:var(--ok)}.option.wrong{background:#fde6e4;border-color:var(--red)}.feedback{min-height:56px;margin-top:15px;padding:12px;border-radius:12px;font-weight:700}.next{display:none;margin-top:10px}.next.show{display:inline-flex}.score-ring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:auto;background:conic-gradient(var(--gold) 0,var(--gold) var(--score),#e3ece8 var(--score));position:relative}.score-ring:before{content:"";position:absolute;inset:13px;border-radius:50%;background:white}.score-ring strong{z-index:1;font-size:2rem}.result{text-align:center;display:none}.result.show{display:block}.quizmain.hide{display:none}
+    .sort-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.bucket{min-height:190px;border:2px dashed #9dbab0;border-radius:20px;padding:18px}.wordbank{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}.wordbtn{background:white;border:2px solid #d9e5df;border-radius:12px;padding:9px 14px;cursor:pointer;font-weight:900}.wordbtn.selected{border-color:var(--gold);box-shadow:0 0 0 4px #ffe9ad}.bucket .wordbtn{margin:5px}.status{text-align:center;font-weight:900;min-height:32px}
+    .exam{display:grid;grid-template-columns:1fr 1fr;gap:18px}.exam textarea{width:100%;min-height:115px;border:2px solid #d7e4df;border-radius:15px;padding:13px;font:inherit;resize:vertical}.answer{display:none;margin-top:10px;padding:12px;background:#eaf5f0;border-radius:12px}.answer.show{display:block}.exit{text-align:center;background:var(--gold);border-radius:30px;padding:38px}.exit h2{margin:0;font-size:clamp(2rem,5vw,3.5rem)}footer{text-align:center;padding:35px;color:var(--muted);font-weight:700}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto}.letter-stage{min-height:330px}.letter{width:135px;height:185px;font-size:6rem}.discover,.compare,.exam{grid-template-columns:1fr}.places,.strategy{grid-template-columns:1fr 1fr}.section-head{display:block}.section-head p{margin-top:8px}}
+    @media(max-width:560px){.shell{width:min(100% - 18px,1180px)}.brand span{display:none}.topin{height:64px}.hero{padding:35px 0;gap:28px}.hero h1{letter-spacing:-1px}.letter-stage{border-radius:26px}.letter{width:112px;height:160px;font-size:5rem}.places,.strategy,.options,.sort-grid{grid-template-columns:1fr}section{padding:52px 0}.card{padding:19px;border-radius:21px}.tool{padding:0 10px}.hide-mobile{display:none}}
+    @media print{.topbar,.cta,.activity,.sort-section,.tool{display:none!important}body{background:#fff}.hero{min-height:auto}.card{box-shadow:none;break-inside:avoid}section{padding:25px 0}}
+  </style>
 </head>
-<body class="h-full bg-white">
-<div id="app" class="w-full h-full overflow-auto"></div>
-<script>
-// ======================== بيانات الدرس ========================
-const config = {
-    lesson_title: "همزة الوصل وهمزة القطع",
-    main_idea: "همزة القطع تُنطق وتُكتب دائماً، أما همزة الوصل فتُنطق في أول الكلام وتُسقط في الوصل.",
-    quiz_title: "اختبر فهمك للهمزات",
-    background_color: "#ffffff",
-    surface_color: "#fff7ed",
-    text_color: "#7c2d12",
-    primary_color: "#ea580c",
-    accent_color: "#c2410c"
-};
+<body>
+  <header class="topbar"><div class="shell topin"><div class="brand">لغتي الجميلة <span>• الصف الخامس</span></div><button class="tool" id="smaller" aria-label="تصغير الخط">أ−</button><button class="tool" id="larger" aria-label="تكبير الخط">أ+</button><button class="tool hide-mobile" id="full" aria-label="ملء الشاشة">⛶</button><div class="progress" id="progress"></div></div></header>
+  <main>
+    <div class="shell hero" id="start"><div><span class="eyebrow">✦ الأنشطة الإملائية</span><h1>همزة <span>القطع</span><br>وهمزة الوصل</h1><p class="lead">رحلة قصيرة نسمع فيها الهمزة، ونكتشف مواضعها، ثم نكتبها كتابة صحيحة في الكلمة والجملة.</p><div class="cta"><a class="btn primary" href="#discover">ابدأ الاكتشاف ←</a><a class="btn secondary" href="#quiz">انتقل إلى التحدي</a></div></div><div class="letter-stage" aria-label="همزة القطع وهمزة الوصل"><div class="letters"><div class="letter cut">أ<small>تُسمع دائمًا</small></div><div class="letter join">ا<small>تُوصل بما قبلها</small></div></div></div></div>
 
-const lessonData = {
-    sections: [
-        {
-            id: 1,
-            title: "القصة: اكتشاف البنسلين",
-            partialIdea: "نقرأ النص ونلاحظ الكلمات التي تبدأ بهمزة",
-            content: `
-                <span class="vocab-word" data-meaning="همزة قطع مضمومة">إِنَّ</span> الجراحَ وحدَها لا تُميتُ، وإنَّما تتسرَّبُ إليها الجراثيمُ الكثيرةُ المنتشرةُ في الهواء، التي تلامسُ جرحَ المصابِ، فتسبِّبُ له الموتَ، فأخذوا يحاولون اكتشافَ علاجاتٍ تقاومُ تلك الجراثيمَ، حتى نجحتْ <span class="vocab-word" data-meaning="همزة قطع مفتوحة">أَوْلَى</span> المحاولاتِ سنةَ 1929 باكتشافِ البنسلين على يد الدكتور (ألكسندر فلمينج)، فكانَ الدواءَ الذي أنقذَ ملايينَ المرضى وحفظَ أُممًا من الفناءِ.
-            `
-        },
-        {
-            id: 2,
-            title: "ما هي همزة القطع؟",
-            partialIdea: "تُنطق وتُكتب دائماً في أول الكلام والوصل",
-            content: `
-                🔹 <span class="vocab-word" data-meaning="همزة تُنطق وتُكتب دائماً">همزة القطع</span>:
-                <ul class="list-disc pr-12 space-y-3 text-2xl">
-                    <li>تُنطق في أول الكلام وفي وسطه.</li>
-                    <li>تُكتب دائماً (أَ، أُ، إِ) حسب حركتها.</li>
-                    <li>ترسم فوق الألف إذا كانت مضمومة (أُ) أو مفتوحة (أَ).</li>
-                    <li>ترسم تحت الألف إذا كانت مكسورة (إِ).</li>
-                </ul>
-                📌 مثال: <b>أَوْلَى</b> (همزة قطع مفتوحة)، <b>إِنَّ</b> (همزة قطع مكسورة).
-            `
-        },
-        {
-            id: 3,
-            title: "ما هي همزة الوصل؟",
-            partialIdea: "تُنطق في أول الكلام وتُسقط في الوصل",
-            content: `
-                🔹 <span class="vocab-word" data-meaning="همزة تُنطق في البداية وتُسقط في الوصل">همزة الوصل</span>:
-                <ul class="list-disc pr-12 space-y-3 text-2xl">
-                    <li>تُنطق في أول الكلام فقط.</li>
-                    <li>إذا وصلنا الكلام بما قبلها، <b>لا تُنطق</b> ولا تُكتب (تُسقط لفظاً).</li>
-                    <li>ترسم على شكل (ا) بدون همزة فوقها أو تحتها.</li>
-                </ul>
-                📌 مثال: كلمة <b>اكتشاف</b> (همزة وصل)، ننطقها في أول الكلام "اِكتشاف"، أما في الوصل نقول "في اكتشاف" (تنطق "فِكتشاف").
-            `
-        }
-    ],
-    quiz: [
-        {
-            question: "همزة القطع هي همزة ...",
-            options: ["تُنطق في أول الكلام فقط", "تُنطق وتُكتب دائماً", "لا تُنطق أبداً", "تُكتب ألفاً فقط"],
-            correct: 1
-        },
-        {
-            question: "كيف نكتب همزة القطع إذا كانت مكسورة؟",
-            options: ["أَ", "إِ", "أُ", "ا"],
-            correct: 1
-        },
-        {
-            question: "أي الكلمات التالية تبدأ بهمزة وصل؟",
-            options: ["إِنَّ", "أَوْلَى", "اكتشاف", "أَنْقَذَ"],
-            correct: 2
-        },
-        {
-            question: "عند وصل كلمة (اكتشاف) بما قبلها، كيف تُنطق؟",
-            options: ["اِكْتِشَاف", "كْتِشَاف", "اَكْتَشَف", "تُنطق كما هي"],
-            correct: 1
-        },
-        {
-            question: "أي الكلمات التالية تبدأ بهمزة قطع مفتوحة؟",
-            options: ["إِنَّ", "أَوْلَى", "اكتشاف", "المحاولات"],
-            correct: 1
-        }
-    ]
-};
+    <section id="discover"><div class="shell"><div class="section-head"><div><span class="eyebrow">١ • لاحظ واكتشف</span><h2>اختبار الواو السحري</h2></div><p>أضف واوًا قبل الكلمة، ثم انطقها. هل بقي صوت الهمزة أم اختفى؟</p></div><div class="discover"><article class="card"><span class="badge">الكلمة الأولى</span><div class="speech">أحمد ← وَ<span class="word">أَ</span>حمد</div><p>هل سمعت صوت الهمزة بعد الواو؟</p><button class="btn secondary revealBtn">اكشف الإجابة</button><div class="reveal"><strong>نعم.</strong> بقي صوتها واضحًا؛ إذن هي <strong>همزة قطع</strong>.</div></article><article class="card"><span class="badge">الكلمة الثانية</span><div class="speech">المدرسة ← وَ<span class="word">لْ</span>مدرسة</div><p>هل سمعت صوت الهمزة بعد الواو؟</p><button class="btn secondary revealBtn">اكشف الإجابة</button><div class="reveal"><strong>لا.</strong> اختفى صوتها ووُصلت الواو باللام؛ إذن هي <strong>همزة وصل</strong>.</div></article></div></div></section>
 
-// ======================== دوال العرض ========================
-function renderLesson() {
-    const app = document.getElementById('app');
-    const { background_color, surface_color, text_color, primary_color, accent_color, lesson_title, main_idea, quiz_title } = config;
-    app.style.backgroundColor = background_color;
-    app.style.color = text_color;
+    <section><div class="shell"><div class="section-head"><div><span class="eyebrow">٢ • افهم القاعدة</span><h2>ما الفرق بينهما؟</h2></div><p>الفرق نسمعه أولًا، ثم نراه في الرسم.</p></div><div class="compare"><article class="card cut-card type"><span class="badge">همزة القطع</span><h3>أَ • أُ • إِ</h3><p class="big-rule">تُنطق في بدء الكلام وفي وصله، وتُرسم فوق الألف أو تحته.</p><div class="examples"><span class="chip">أَحمد</span><span class="chip">أُمّ</span><span class="chip">إِكرام</span><span class="chip">وَأَقبلَ</span></div></article><article class="card join-card type"><span class="badge">همزة الوصل</span><h3>ا</h3><p class="big-rule">تُنطق في بدء الكلام، وتسقط في الوصل، وتُرسم ألفًا بلا همزة.</p><div class="examples"><span class="chip">اِسم</span><span class="chip">اِكتبْ</span><span class="chip">اِستمعَ</span><span class="chip">وَالكتاب</span></div></article></div><div class="note shell" style="margin-top:18px"><strong>قاعدة ذهبية:</strong> لا تعتمد على شكل الكلمة وحده؛ انطقها مسبوقة بالواو أو الفاء: <strong>وأحمد</strong> — <strong>فالكتاب</strong>.</div></div></section>
 
-    let html = `
-        <div class="max-w-7xl mx-auto px-8 py-20">
-            <header class="text-center mb-20 animate-fade-in">
-                <div class="inline-flex items-center justify-center p-8 rounded-3xl mb-10" style="background: ${primary_color}20; border: 4px solid ${primary_color};">
-                    <svg class="w-24 h-24" style="color: ${primary_color};" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                </div>
-                <h1 class="text-7xl font-black mb-8" style="color: ${primary_color}; text-shadow: 0 4px 15px ${primary_color}30;">${lesson_title}</h1>
-                <div class="max-w-4xl mx-auto">
-                    <div class="inline-block px-12 py-7 rounded-3xl shadow-2xl" style="background: ${surface_color}; border: 5px solid ${accent_color};">
-                        <p class="text-3xl font-bold leading-relaxed" style="color: ${text_color};">💡 ${main_idea}</p>
-                    </div>
-                </div>
-            </header>
+    <section><div class="shell"><div class="section-head"><div><span class="eyebrow">٣ • مواضع الكتابة</span><h2>أين نجد كل همزة؟</h2></div><p>رتّب المواضع في ذهنك بحسب نوع الكلمة: اسم، فعل، حرف.</p></div><div class="places"><article class="card place"><div class="icon">📘</div><h3>همزة الوصل في الأسماء</h3><ul><li><strong>أل التعريف:</strong> الكتاب، المدرسة.</li><li>أسماء سماعية مشهورة: <strong>اسم، ابن، ابنة، اثنان، اثنتان، امرؤ، امرأة.</strong></li></ul></article><article class="card place"><div class="icon">🏃</div><h3>همزة الوصل في الأفعال</h3><ul><li>أمر الفعل الثلاثي: <strong>اكتبْ، اجلسْ.</strong></li><li>ماضي الخماسي والسداسي وأمرهما ومصدرهما: <strong>انطلقَ، انطلقْ، انطلاق؛ استخرجَ، استخرجْ، استخراج.</strong></li></ul></article><article class="card place"><div class="icon">✍️</div><h3>همزة القطع</h3><ul><li>في جميع الحروف المبدوءة بهمزة ما عدا <strong>أل</strong>: إنَّ، إلى، أو.</li><li>في الأسماء ما عدا أسماء الوصل: أحمد، إيمان، أُسامة.</li><li>في الماضي الثلاثي والرباعي، وأمر الرباعي ومصدره، ومضارع المتكلم: أكلَ، أكرمَ، أكرِمْ، إكرام، أكتبُ.</li></ul></article></div><article class="card enrich" style="margin-top:16px"><strong>إثراء مهم:</strong> عدد الأسماء السماعية عشرة في القاعدة العامة، ومن بقيتها: <strong>ابنم، است، ايمُنُ الله</strong>. يكفي طالب الصف الخامس إتقان الأسماء الشائعة الواردة أعلاه، مع الانتباه إلى أن درس <strong>ابن</strong> له قواعد أخرى في الإثبات والحذف.</article></div></section>
 
-            <div class="space-y-12 mb-24">
-    `;
+    <section><div class="shell"><div class="section-head"><div><span class="eyebrow">٤ • فكّر كخبير</span><h2>خطة الحل في الاختبار</h2></div><p>ثلاث خطوات تمنع التخمين وتساعدك على التعليل.</p></div><div class="strategy"><article class="card step"><h3>حدّد نوع الكلمة</h3><p class="mini">اسم أم فعل أم حرف؟</p></article><article class="card step"><h3>جرّب الوصل</h3><p class="mini">ضع واوًا قبلها وانطقها.</p></article><article class="card step"><h3>اكتب وعلّل</h3><p class="mini">بقي صوتها = قطع، اختفى = وصل، ثم اذكر الموضع.</p></article></div></div></section>
 
-    lessonData.sections.forEach((section, index) => {
-        html += `
-            <div class="section-card rounded-3xl p-12 shadow-2xl" style="background: ${surface_color}; border-right: 10px solid ${primary_color};">
-                <div class="flex items-start gap-8 mb-8">
-                    <div class="flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center text-3xl font-black shadow-xl" style="background: ${primary_color}; color: white;">${index + 1}</div>
-                    <div class="flex-1">
-                        <h2 class="text-4xl font-black mb-5" style="color: ${primary_color};">${section.title}</h2>
-                        <p class="text-2xl font-bold px-8 py-4 rounded-2xl inline-block shadow-md" style="background-color: ${accent_color}20; color: ${text_color}; border-right: 5px solid ${accent_color};">📌 ${section.partialIdea}</p>
-                    </div>
-                </div>
-                <div class="text-3xl leading-loose pr-24 font-semibold" style="color: ${text_color};" id="section-${section.id}">${section.content}</div>
-            </div>
-        `;
-    });
+    <section id="quiz"><div class="shell activity"><div class="section-head"><div><span class="eyebrow">٥ • تحدّي الإتقان</span><h2>محاكاة اختبار قصيرة</h2></div><p>اختر الإجابة، وستظهر لك تغذية راجعة تشرح السبب.</p></div><div class="quizbox"><div class="quizmain"><div class="qmeta"><span id="qnum">السؤال ١ من ٨</span><span>درجتك: <b id="score">٠</b></span></div><div class="qtext" id="qtext"></div><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div><button class="btn primary next" id="next">السؤال التالي</button></div><div class="result" id="result"><div class="score-ring" id="ring"><strong id="finalScore">٠/٨</strong></div><h3 id="resultTitle"></h3><p id="resultText"></p><button class="btn primary" id="restart">أعد المحاولة</button></div></div></div></section>
 
-    html += `
-        </div>
-        <div class="rounded-3xl p-12 shadow-2xl mb-12" style="background: ${surface_color}; border: 5px solid ${accent_color};">
-            <div class="text-center mb-12">
-                <div class="inline-flex p-8 rounded-full mb-8 shadow-2xl" style="background: ${accent_color};">
-                    <svg class="w-20 h-20" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                    </svg>
-                </div>
-                <h2 class="text-6xl font-black mb-5" style="color: ${accent_color};">أنشطة الفهم القرائي</h2>
-                <p class="text-3xl font-bold" style="color: ${text_color};">اضغط على كلمة "الإجابة" لمعرفة الحل الصحيح 📖</p>
-            </div>
-            <div id="activities-content"></div>
-        </div>
+    <section class="sort-section"><div class="shell"><div class="section-head"><div><span class="eyebrow">٦ • صنّف الكلمات</span><h2>مختبر الهمزات</h2></div><p>اضغط كلمة، ثم اضغط الصندوق المناسب. بعدها تحقّق من تصنيفك.</p></div><div class="card"><div class="wordbank" id="bank"></div><div class="sort-grid"><div class="bucket" data-type="cut"><h3>🔴 همزة قطع</h3></div><div class="bucket" data-type="join"><h3>🟢 همزة وصل</h3></div></div><div class="status" id="sortStatus"></div><div class="cta"><button class="btn primary" id="checkSort">تحقّق</button><button class="btn secondary" id="resetSort">إعادة</button></div></div></div></section>
 
-        <div class="rounded-3xl p-12 shadow-2xl" style="background: ${surface_color}; border: 5px solid ${primary_color};">
-            <div class="text-center mb-12">
-                <div class="inline-flex p-8 rounded-full mb-8 shadow-2xl" style="background: ${primary_color};">
-                    <svg class="w-20 h-20" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                </div>
-                <h2 class="text-6xl font-black mb-5" style="color: ${primary_color}; text-shadow: 0 3px 12px ${primary_color}30;">${quiz_title}</h2>
-                <p class="text-3xl font-bold" style="color: ${text_color};">أجب عن الأسئلة التالية لتتأكد من فهمك للدرس 📝</p>
-            </div>
-            <div id="quiz-content"></div>
-        </div>
+    <section><div class="shell"><div class="section-head"><div><span class="eyebrow">٧ • أسئلة كتابية</span><h2>طبّق وعلّل</h2></div><p>اكتب إجابتك أولًا، ثم قارنها بنموذج الإجابة.</p></div><div class="exam"><article class="card"><h3>صحّح الخطأ الإملائي</h3><p>«إستمعَ الطالبُ إلى القصة.»</p><textarea aria-label="اكتب التصويب والتعليل" placeholder="اكتب الجملة صحيحة، ثم علّل..."></textarea><button class="btn secondary answerBtn">نموذج الإجابة</button><div class="answer"><strong>استمعَ الطالبُ إلى القصة.</strong><br>كُتبت «استمع» بهمزة وصل؛ لأنها فعل ماضٍ سداسي. أما «إلى» فهمزتها قطع؛ لأنها حرف.</div></article><article class="card"><h3>استخرج وصنّف</h3><p>«انطلقَ أحمدُ إلى المدرسة، واستقبلَ أصدقاءه.»</p><textarea aria-label="استخرج الكلمات وصنفها" placeholder="همزة الوصل: ... | همزة القطع: ..."></textarea><button class="btn secondary answerBtn">نموذج الإجابة</button><div class="answer"><strong>همزة الوصل:</strong> انطلق، المدرسة، استقبل.<br><strong>همزة القطع:</strong> أحمد، إلى، أصدقاءه.</div></article></div></div></section>
 
-        <footer class="mt-20 text-center rounded-3xl p-12 shadow-2xl" style="background: ${primary_color};">
-            <div class="inline-flex p-6 rounded-full mb-6 shadow-xl" style="background: white;">
-                <svg class="w-16 h-16" style="color: ${primary_color};" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                </svg>
-            </div>
-            <h3 class="text-5xl font-black mb-4" style="color: white;">الأستاذ خليل البلوشي</h3>
-            <div class="flex items-center justify-center gap-4 mb-2">
-                <svg class="w-10 h-10" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                </svg>
-                <p class="text-3xl font-bold" style="color: white;">مدرسة: سعد بن معاذ للتعليم الأساسي</p>
-            </div>
-        </footer>
-    </div>
-    `;
-
-    app.innerHTML = html;
-
-    // إضافة الكلمات التفاعلية
-    lessonData.sections.forEach(section => {
-        const sectionEl = document.getElementById(`section-${section.id}`);
-        if (!sectionEl) return;
-        const vocabWords = sectionEl.querySelectorAll('.vocab-word');
-        vocabWords.forEach(word => {
-            const meaning = word.dataset.meaning;
-            word.style.color = accent_color;
-            word.style.fontWeight = '900';
-            word.style.borderBottom = `4px solid ${accent_color}`;
-            word.style.paddingBottom = '3px';
-
-            const tooltip = document.createElement('div');
-            tooltip.className = 'vocab-tooltip';
-            tooltip.textContent = `✦ ${meaning}`;
-            tooltip.style.backgroundColor = 'white';
-            tooltip.style.borderColor = accent_color;
-            tooltip.style.color = text_color;
-            word.appendChild(tooltip);
-
-            word.addEventListener('click', (e) => {
-                e.stopPropagation();
-                document.querySelectorAll('.vocab-tooltip').forEach(t => {
-                    if (t !== tooltip) t.classList.remove('active');
-                });
-                tooltip.classList.toggle('active');
-            });
-        });
-    });
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.vocab-tooltip').forEach(t => t.classList.remove('active'));
-    });
-
-    renderActivities();
-    renderQuiz();
-}
-
-// ======================== الأنشطة ========================
-function renderActivities() {
-    const container = document.getElementById('activities-content');
-    const { surface_color, text_color, primary_color, accent_color } = config;
-
-    const activities = [
-        {
-            title: "أولاً: أُصنّف",
-            questions: [
-                {
-                    question: "1️⃣ أُصنف الكلمات التالية إلى همزة قطع وهمزة وصل: (إِنَّ، اكتشاف، أَوْلَى، المحاولات، أَنْقَذَ)",
-                    type: "list",
-                    items: [
-                        "همزة قطع: إِنَّ، أَوْلَى، أَنْقَذَ",
-                        "همزة وصل: اكتشاف، المحاولات"
-                    ]
-                },
-                {
-                    question: "2️⃣ لماذا كلمة (المحاولات) تبدأ بهمزة وصل؟",
-                    type: "explain",
-                    answer: "لأنها همزة وصل، تُنطق في أول الكلام (المُحاولات)، وعند وصلها بما قبلها تُسقط (فالمُحاولات)."
-                }
-            ]
-        },
-        {
-            title: "ثانياً: أطبّق",
-            questions: [
-                {
-                    question: "3️⃣ كيف تكتب همزة القطع إذا كانت مضمومة؟ أعطِ مثالاً من النص.",
-                    type: "explain",
-                    answer: "تُكتب (أُ) مثل: أُولى (وهي في النص أَوْلَى ولكن حركتها الفتح هنا). مثال آخر للضم: أُكْتُبْ."
-                },
-                {
-                    question: "4️⃣ انطق كلمة (اكتشاف) في أول الكلام، ثم انطقها في وسط الكلام (في اكتشاف). ماذا تلاحظ؟",
-                    type: "explain",
-                    answer: "في أول الكلام: اِكْتِشَاف (تُنطق الهمزة). في وسط الكلام: فِكْتِشَاف (تُسقط الهمزة)."
-                }
-            ]
-        }
+    <section><div class="shell exit"><span class="eyebrow">بطاقة الخروج</span><h2>قل القاعدة في عشر ثوانٍ!</h2><p>همزة القطع تُنطق في البدء والوصل، وهمزة الوصل تُنطق في البدء وتسقط في الوصل.</p><a class="btn primary" href="#start">العودة إلى البداية ↑</a></div></section>
+  </main>
+  <footer>إعداد: الأستاذ خليل البلوشي • مادة اللغة العربية • الصف الخامس الأساسي</footer>
+  <script>
+    const ar=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+    document.querySelectorAll('.revealBtn').forEach(b=>b.onclick=()=>{b.nextElementSibling.classList.toggle('show');b.textContent=b.nextElementSibling.classList.contains('show')?'أخفِ الإجابة':'اكشف الإجابة'});
+    document.querySelectorAll('.answerBtn').forEach(b=>b.onclick=()=>b.nextElementSibling.classList.toggle('show'));
+    let fs=1; document.querySelector('#larger').onclick=()=>{fs=Math.min(1.25,fs+.08);document.documentElement.style.setProperty('--fs',fs)};document.querySelector('#smaller').onclick=()=>{fs=Math.max(.88,fs-.08);document.documentElement.style.setProperty('--fs',fs)};document.querySelector('#full').onclick=()=>document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
+    addEventListener('scroll',()=>{const h=document.documentElement;document.querySelector('#progress').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+    const questions=[
+      {q:'أيُّ الكلمات الآتية تبدأ بهمزة وصل؟',o:['إيمان','أكرمَ','استخرجَ','إلى'],a:2,e:'«استخرجَ» فعل ماضٍ سداسي، وماضي الفعل السداسي يبدأ بهمزة وصل.'},
+      {q:'أيُّ الكلمات الآتية كُتبت كتابة صحيحة؟',o:['إسم','أبن','امرأة','إثنان'],a:2,e:'«امرأة» من الأسماء السماعية التي تبدأ بهمزة وصل، فتُكتب ألفًا بلا همزة.'},
+      {q:'نوع الهمزة في كلمة «المدرسة» هو:',o:['همزة قطع','همزة وصل','همزة متوسطة','لا تبدأ بألف'],a:1,e:'همزة «أل» التعريف همزة وصل: نقول وَالمدرسة دون نطق الهمزة.'},
+      {q:'لماذا كُتبت «أحمد» بهمزة قطع؟',o:['لأنها حرف','لأنها فعل أمر','لأنها اسم غير مستثنى','لأنها معرفة بأل'],a:2,e:'الأصل في همزات الأسماء أنها قطع، ما عدا الأسماء السماعية المحددة.'},
+      {q:'اختر الجملة الصحيحة إملائيًا:',o:['إكتبْ واجبك.','اكتبْ واجبك.','أكتبْ واجبك.','ءاكتبْ واجبك.'],a:1,e:'«اكتبْ» أمر من الفعل الثلاثي «كتب»، وأمر الثلاثي يبدأ بهمزة وصل.'},
+      {q:'أي الكلمات الآتية تبدأ بهمزة قطع لأنها حرف؟',o:['الكتاب','إلى','اسم','اجلس'],a:1,e:'«إلى» حرف، وجميع الحروف المبدوءة بهمزة همزتها قطع، ما عدا «أل» التعريف.'},
+      {q:'عند وصل الواو بكلمة «ابن» نقول:',o:['وَأَبْن','وَإِبْن','وَبْن','وَءابن'],a:2,e:'تسقط همزة الوصل في أثناء الكلام، فنصل الواو مباشرة بالباء.'},
+      {q:'في جملة «أقبلَ سالمٌ واستمعَ»، ترتيب الهمزتين هو:',o:['وصل ثم قطع','قطع ثم وصل','قطع ثم قطع','وصل ثم وصل'],a:1,e:'«أقبل» ماضٍ رباعي فهمزته قطع، و«استمع» ماضٍ سداسي فهمزته وصل.'}
     ];
-
-    let html = '';
-    activities.forEach((section, sIdx) => {
-        html += `
-            <div class="mb-14">
-                <div class="mb-10 pr-10 py-5 rounded-r-3xl inline-block shadow-2xl" style="background: ${accent_color};">
-                    <h3 class="text-5xl font-black" style="color: white;">${section.title}</h3>
-                </div>
-                <div class="space-y-10">
-        `;
-        section.questions.forEach((q, qIdx) => {
-            const answerId = `act-${sIdx}-${qIdx}`;
-            html += `
-                <div class="rounded-3xl p-10 shadow-2xl" style="background-color: white; border-right: 8px solid ${accent_color};">
-                    <p class="text-3xl font-bold mb-8 leading-relaxed" style="color: ${text_color};">${q.question}</p>
-            `;
-
-            if (q.type === 'list') {
-                q.items.forEach((item, idx) => {
-                    html += `<div class="flex items-start gap-5"><span class="text-2xl font-black" style="color: ${primary_color};">${idx+1}-</span><div class="flex-1 h-2 rounded-full" style="background-color: ${surface_color};"></div></div>`;
-                });
-            } else if (q.type === 'explain') {
-                html += `<div class="space-y-3"><div class="h-2 rounded-full" style="background-color: ${surface_color};"></div><div class="h-2 rounded-full" style="background-color: ${surface_color};"></div></div>`;
-            }
-
-            html += `
-                    <div class="mt-8 text-center">
-                        <button class="show-answer-btn px-12 py-5 rounded-2xl text-2xl font-black shadow-2xl transition-all hover:scale-110" style="background: ${primary_color}; color: white;" data-answer-id="${answerId}">👁️ الإجابة</button>
-                    </div>
-                    <div id="${answerId}" class="answer-content mt-8 p-8 rounded-3xl hidden animate-fade-in shadow-xl" style="background: ${accent_color}20; border: 4px solid ${accent_color};">
-            `;
-            if (q.type === 'list') {
-                q.items.forEach((item, idx) => html += `<p class="text-2xl font-black" style="color: ${accent_color};">${idx+1}- ${item}</p>`);
-            } else if (q.type === 'explain') {
-                html += `<p class="text-2xl font-black" style="color: ${accent_color};">✅ ${q.answer}</p>`;
-            }
-            html += `</div></div>`;
-        });
-        html += `</div></div>`;
-    });
-
-    container.innerHTML = html;
-
-    document.querySelectorAll('.show-answer-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const answerDiv = document.getElementById(this.dataset.answerId);
-            if (answerDiv.classList.contains('hidden')) {
-                answerDiv.classList.remove('hidden');
-                this.innerHTML = '🔼 إخفاء الإجابة';
-            } else {
-                answerDiv.classList.add('hidden');
-                this.innerHTML = '👁️ الإجابة';
-            }
-        });
-    });
-}
-
-// ======================== الاختبار التفاعلي ========================
-let currentQuestionIndex = 0;
-let score = 0;
-let quizStarted = false;
-let selectedAnswers = [];
-
-function renderQuiz() {
-    const container = document.getElementById('quiz-content');
-    const { primary_color, accent_color, surface_color, text_color } = config;
-
-    if (!quizStarted) {
-        container.innerHTML = `
-            <div class="text-center py-20">
-                <button id="start-quiz-btn" class="px-20 py-8 rounded-3xl text-4xl font-black shadow-2xl transition-all hover:scale-110" style="background: ${primary_color}; color: white;">🎯 ابدأ الاختبار</button>
-            </div>
-        `;
-        document.getElementById('start-quiz-btn').addEventListener('click', () => {
-            quizStarted = true;
-            currentQuestionIndex = 0;
-            score = 0;
-            selectedAnswers = new Array(lessonData.quiz.length).fill(null);
-            renderQuiz();
-        });
-        return;
-    }
-
-    if (currentQuestionIndex >= lessonData.quiz.length) {
-        const percentage = Math.round((score / lessonData.quiz.length) * 100);
-        let emoji = '🎉', message = 'ممتاز! أنت فهمت الدرس بشكل رائع!', msgColor = accent_color;
-        if (percentage < 50) { emoji = '📚'; message = 'حاول مراجعة الدرس مرة أخرى'; msgColor = primary_color; }
-        else if (percentage < 80) { emoji = '👍'; message = 'جيد جداً! مع القليل من المراجعة ستكون ممتازاً'; }
-        container.innerHTML = `
-            <div class="text-center py-20 animate-fade-in">
-                <div class="text-9xl mb-10">${emoji}</div>
-                <h3 class="text-6xl font-black mb-8" style="color: ${msgColor};">النتيجة: ${score} من ${lessonData.quiz.length}</h3>
-                <div class="inline-block px-16 py-8 rounded-3xl mb-10 shadow-2xl" style="background: ${primary_color};"><div class="text-8xl font-black" style="color: white;">${percentage}%</div></div>
-                <p class="text-4xl font-bold mb-12" style="color: ${text_color};">${message}</p>
-                <button id="retry-btn" class="px-16 py-6 rounded-3xl text-3xl font-black shadow-2xl transition-all hover:scale-110" style="background: ${primary_color}; color: white;">🔄 أعد المحاولة</button>
-            </div>
-        `;
-        document.getElementById('retry-btn').addEventListener('click', () => {
-            quizStarted = false;
-            currentQuestionIndex = 0;
-            score = 0;
-            selectedAnswers = [];
-            renderQuiz();
-        });
-        return;
-    }
-
-    const q = lessonData.quiz[currentQuestionIndex];
-    const progress = ((currentQuestionIndex) / lessonData.quiz.length) * 100;
-
-    container.innerHTML = `
-        <div class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <span class="text-3xl font-black px-8 py-4 rounded-2xl shadow-lg" style="color: ${text_color}; background-color: white; border: 3px solid ${primary_color};">السؤال ${currentQuestionIndex+1} من ${lessonData.quiz.length}</span>
-                <span class="text-3xl font-black px-8 py-4 rounded-2xl shadow-lg" style="color: white; background: ${primary_color};">النقاط: ${score}</span>
-            </div>
-            <div class="w-full h-5 rounded-full shadow-inner" style="background-color: ${surface_color}; border: 2px solid ${primary_color};">
-                <div class="progress-bar h-full rounded-full shadow-lg transition-all" style="width: ${progress}%; background: ${primary_color};"></div>
-            </div>
-        </div>
-        <div class="rounded-3xl p-12 mb-12 shadow-2xl" style="background-color: white; border: 4px solid ${primary_color};">
-            <h3 class="text-4xl font-black mb-10 leading-relaxed" style="color: ${text_color};">${q.question}</h3>
-            <div class="space-y-6" id="options-container"></div>
-        </div>
-        <div class="text-center">
-            <button id="next-btn" class="px-16 py-6 rounded-3xl text-3xl font-black shadow-2xl transition-all opacity-50 cursor-not-allowed" style="background: ${primary_color}; color: white;" disabled>التالي ⬅️</button>
-        </div>
-        <div id="feedback" class="mt-10 text-center text-3xl font-black rounded-3xl p-8 hidden shadow-2xl"></div>
-    `;
-
-    const optsContainer = document.getElementById('options-container');
-    q.options.forEach((opt, idx) => {
-        const el = document.createElement('div');
-        el.className = 'quiz-option rounded-2xl p-8 cursor-pointer shadow-lg';
-        el.style.backgroundColor = surface_color;
-        el.style.border = `4px solid ${primary_color}40`;
-        el.style.color = text_color;
-        el.innerHTML = `<div class="flex items-center gap-6"><div class="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl font-black shadow-lg" style="background: ${primary_color}; color: white;">${String.fromCharCode(65+idx)}</div><span class="text-3xl font-bold">${opt}</span></div>`;
-        el.addEventListener('click', () => {
-            if (selectedAnswers[currentQuestionIndex] !== null) return;
-            selectedAnswers[currentQuestionIndex] = idx;
-            const correct = idx === q.correct;
-            if (correct) { score++; el.style.backgroundColor = accent_color+'30'; el.style.borderColor = accent_color; el.style.borderWidth = '5px'; el.classList.add('correct'); showFeedback('✅ إجابة صحيحة! أحسنت!', accent_color, 'white'); }
-            else {
-                el.style.backgroundColor = '#dc262630'; el.style.borderColor = '#dc2626'; el.style.borderWidth = '5px'; el.classList.add('incorrect');
-                const correctEl = optsContainer.children[q.correct];
-                correctEl.style.backgroundColor = accent_color+'30'; correctEl.style.borderColor = accent_color; correctEl.style.borderWidth = '5px';
-                showFeedback('❌ إجابة خاطئة. الإجابة الصحيحة محددة باللون البرتقالي', '#dc2626', 'white');
-            }
-            document.querySelectorAll('.quiz-option').forEach(opt => { opt.classList.add('disabled'); opt.style.cursor = 'not-allowed'; opt.style.opacity = '0.7'; });
-            const nextBtn = document.getElementById('next-btn');
-            nextBtn.disabled = false; nextBtn.classList.remove('opacity-50', 'cursor-not-allowed'); nextBtn.classList.add('hover:scale-110');
-        });
-        optsContainer.appendChild(el);
-    });
-
-    document.getElementById('next-btn').addEventListener('click', () => {
-        currentQuestionIndex++;
-        renderQuiz();
-    });
-}
-
-function showFeedback(msg, bg, color) {
-    const fb = document.getElementById('feedback');
-    fb.textContent = msg;
-    fb.style.backgroundColor = bg;
-    fb.style.color = color;
-    fb.classList.remove('hidden');
-}
-
-// ======================== تشغيل التطبيق ========================
-renderLesson();
-</script>
+    let qi=0,score=0,locked=false;const qtext=document.querySelector('#qtext'),opts=document.querySelector('#options'),feed=document.querySelector('#feedback'),next=document.querySelector('#next');
+    function showQ(){locked=false;next.classList.remove('show');feed.textContent='';const x=questions[qi];document.querySelector('#qnum').textContent=`السؤال ${ar(qi+1)} من ${ar(questions.length)}`;qtext.textContent=x.q;opts.innerHTML='';x.o.forEach((v,i)=>{const b=document.createElement('button');b.className='option';b.textContent=v;b.onclick=()=>answer(i,b);opts.appendChild(b)})}
+    function answer(i,b){if(locked)return;locked=true;const x=questions[qi],buttons=[...opts.children];buttons[x.a].classList.add('correct');if(i===x.a){score++;feed.innerHTML='✅ <strong>إجابة صحيحة.</strong> '+x.e}else{b.classList.add('wrong');feed.innerHTML='❌ <strong>راجع القاعدة.</strong> '+x.e}document.querySelector('#score').textContent=ar(score);next.classList.add('show')}
+    next.onclick=()=>{qi++;qi<questions.length?showQ():finish()};function finish(){document.querySelector('.quizmain').classList.add('hide');document.querySelector('#result').classList.add('show');document.querySelector('#finalScore').textContent=`${ar(score)}/${ar(questions.length)}`;document.querySelector('#ring').style.setProperty('--score',(score/questions.length*100)+'%');document.querySelector('#resultTitle').textContent=score>=7?'ممتاز! أتقنت المهارة 🌟':score>=5?'أحسنت، بقيت مراجعة بسيطة 👍':'بداية جيدة، أعد قراءة القاعدة 📘';document.querySelector('#resultText').textContent='تذكّر: صنّف الكلمة، ثم جرّب وصلها بالواو، وبعدها علّل.'}document.querySelector('#restart').onclick=()=>{qi=0;score=0;document.querySelector('#score').textContent='٠';document.querySelector('.quizmain').classList.remove('hide');document.querySelector('#result').classList.remove('show');showQ()};showQ();
+    const words=[['أحمد','cut'],['الكتاب','join'],['استغفر','join'],['إلى','cut'],['اكتب','join'],['إكرام','cut'],['امرأة','join'],['أقبل','cut']];let selected=null;const bank=document.querySelector('#bank');
+    function makeWord(w,t){const b=document.createElement('button');b.className='wordbtn';b.textContent=w;b.dataset.answer=t;b.onclick=()=>{document.querySelectorAll('.wordbtn').forEach(x=>x.classList.remove('selected'));selected=b;b.classList.add('selected')};return b}function resetSort(){bank.innerHTML='';document.querySelectorAll('.bucket .wordbtn').forEach(x=>x.remove());words.forEach(x=>bank.appendChild(makeWord(...x)));document.querySelector('#sortStatus').textContent='';selected=null}document.querySelectorAll('.bucket').forEach(box=>box.onclick=e=>{if(e.target.classList.contains('wordbtn'))return;if(selected){box.appendChild(selected);selected.classList.remove('selected');selected=null}});document.querySelector('#checkSort').onclick=()=>{let n=0;document.querySelectorAll('.bucket').forEach(box=>box.querySelectorAll('.wordbtn').forEach(w=>{const ok=w.dataset.answer===box.dataset.type;w.style.borderColor=ok?'#16805f':'#b8433e';if(ok)n++}));document.querySelector('#sortStatus').textContent=n===words.length?'أحسنت! جميع الكلمات في مكانها الصحيح 🌟':`أصبتَ في ${ar(n)} من ${ar(words.length)}. راجع الكلمات ذات الإطار الأحمر.`};document.querySelector('#resetSort').onclick=resetSort;resetSort();
+    document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'&&next.classList.contains('show'))next.click();if(e.key==='Home')scrollTo({top:0,behavior:'smooth'})});
+  </script>
 </body>
 </html>
